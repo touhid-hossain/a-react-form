@@ -1,0 +1,19 @@
+.top-btn {
+  background-color: #6055a5;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 8px 2px rgb(0 0 0 / 20%);
+}
+
+.top-btn p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .top-btn p {
+    font-size: 12px;
+  }
+}
