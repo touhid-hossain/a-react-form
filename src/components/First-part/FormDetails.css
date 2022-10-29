@@ -1,13 +1,13 @@
 /* First part */
 .first-part {
-  max-width: 45%;
+  max-width: 48%;
   margin: 0 auto;
   text-align: left;
 }
 
 .first-part h1 {
   font-size: 3.1rem;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 0 auto 1.5rem;
 }
 
