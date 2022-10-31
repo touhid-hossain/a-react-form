@@ -5,7 +5,6 @@ import FormInput from "./FormInput.jsx";
 import "./FormInput.css";
 import TopBar from "./Topbar/TopBar.jsx";
 
-
 export const ContactUs = () => {
   const form = useRef();
 
@@ -15,6 +14,7 @@ export const ContactUs = () => {
     lastName: "",
     email: "",
     password: "",
+    confirmPassword: "",
     message: "",
   });
 
@@ -23,7 +23,7 @@ export const ContactUs = () => {
       id: 1,
       name: "firstName",
       type: "text",
-      placeholder: "First Name",
+      placeholder: "His / Her Name",
       errorMessage: "First Name should be 3-20 characters!",
       pattern: "^[A-Za-z0-9_ ]{3,20}$",
       required: true,
@@ -33,7 +33,7 @@ export const ContactUs = () => {
       id: 2,
       name: "lastName",
       type: "text",
-      placeholder: "Last Name",
+      placeholder: "Your Name",
       errorMessage: "Last Name should be 4-8 characters!",
       pattern: "^[A-Za-z0-9]{4,8}$",
       required: true,
@@ -63,6 +63,17 @@ export const ContactUs = () => {
 
     {
       id: 5,
+      name: "confirmPassword",
+      type: "password",
+      placeholder: "Confirm Password",
+      errorMessage: "Passwords don't match!",
+      label: "Confirm Password",
+      pattern: values.password,
+      required: true,
+    },
+
+    {
+      id: 7,
       name: "message",
       type: "text",
       placeholder: "Your Message",
@@ -87,10 +98,10 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Gone Successfully <3");
         },
         (error) => {
-          console.log(error.text);
+          console.log("!!RED_ALERT >> Error: 400!!");
         }
       );
     e.target.reset();
@@ -114,7 +125,6 @@ export const ContactUs = () => {
             onChange={onChange}
           />
         ))}
-
         <button>Claim your free trial </button>
         <p className="down-btn">
           By clicking the button, you are agreeing to our
@@ -123,6 +133,5 @@ export const ContactUs = () => {
       </form>
     </div>
   );
-  // };
 };
 export default ContactUs;

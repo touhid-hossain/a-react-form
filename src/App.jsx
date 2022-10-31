@@ -1,6 +1,7 @@
 // import './App.css';
 import FormDetails from "./components/First-part/FormDetails";
-import ContactUs from "./components/second-part/Form";
+import ContactUs from "./components/second-part/ContactUs";
+
 
 function App() {
   return (
